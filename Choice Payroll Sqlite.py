@@ -198,7 +198,7 @@ frame_choice_payroll = Frame(window, padx=20, pady=20)
 frame_choice_payroll.grid(row=1, column=0)
 
 # Bold text for employee basic info
-Label(frame_choice_payroll, text="EMPLOYEE BASIC INFO:", font=("Arial", 8, "bold")).grid(row=1, column=0, columnspan=2,
+Label(frame_choice_payroll, text="EMPLOYEE BASIC INFO:", font=("Times New Roman", 8, "bold")).grid(row=1, column=0, columnspan=2,
                                                                                          padx=(0, 40), pady=(0, 10))
 
 # Labels and Entry Widgets for basic employee info
@@ -299,11 +299,11 @@ Label(frame_choice_payroll, text="Total Deduction:").grid(row=22, column=2, stic
 Entry(frame_choice_payroll, textvariable=total_deduction).grid(row=22, column=3, pady=5)
 
 # Additional Buttons
-Button(frame_choice_payroll, text="GROSS INCOME", command=calculate_gross_income, bg="sky blue").grid(row=23, column=2, padx=(30, 5), pady=5, sticky=W)
-Button(frame_choice_payroll, text="NET INCOME", command=calculate_net_income, bg="sky blue").grid(row=23, column=2, padx=(130, 0), pady=5, sticky=W)
-Button(frame_choice_payroll, text="SAVE", command=save_employee_data, bg="light green").grid(row=23, column=3, padx=(0, 0), pady=5, sticky=W)
-Button(frame_choice_payroll, text="UPDATE", command=update_employee_data, bg="light green").grid(row=23, column=3, padx=(40, 0), pady=5, sticky=W)
-Button(frame_choice_payroll, text="DEDUCTIONS", command=calculate_deductions, bg="light yellow").grid(row=23, column=3, padx=(100, 0), pady=5, sticky=W)
+Button(frame_choice_payroll, text="GROSS INCOME", command=calculate_gross_income, bg="dark blue").grid(row=23, column=2, padx=(30, 5), pady=5, sticky=W)
+Button(frame_choice_payroll, text="NET INCOME", command=calculate_net_income, bg="blue").grid(row=23, column=2, padx=(130, 0), pady=5, sticky=W)
+Button(frame_choice_payroll, text="SAVE", command=save_employee_data, bg="orange").grid(row=23, column=3, padx=(0, 0), pady=5, sticky=W)
+Button(frame_choice_payroll, text="UPDATE", command=update_employee_data, bg="purple").grid(row=23, column=3, padx=(40, 0), pady=5, sticky=W)
+Button(frame_choice_payroll, text="DEDUCTIONS", command=calculate_deductions, bg="yellow").grid(row=23, column=3, padx=(100, 0), pady=5, sticky=W)
 
 
 # Add employee image with padding
@@ -358,10 +358,10 @@ search_frame = Frame(window, padx=20, pady=0)
 search_frame.grid(row=1, column=0, padx=(0, 50), pady=(20, 330), sticky=W)
 Label(search_frame, text="Employee Number:").grid(row=6, column=0, sticky=E, pady=(20, 5))
 Entry(search_frame, textvariable=search_employee_number).grid(row=6, column=1, padx=(0, 50), pady=(20, 5))
-Button(search_frame, text="Search", command=search_employee, bg="Red").grid(row=7, column=1, padx=(0, 50), pady=5, sticky=W)
+Button(search_frame, text="Search", command=search_employee, bg="Blue").grid(row=7, column=1, padx=(0, 50), pady=5, sticky=W)
 
 # Labels and Entry Widgets for payroll info
-Label(window, text="Bianca's Choice Payroll", font=("Times New Roman", 30, "bold")).grid(row=0, column=0, columnspan=3, padx=20, pady=20, sticky="nsew")
+Label(window, text="Bianca's Choice Payroll", font=("Arial", 30, "bold")).grid(row=0, column=0, columnspan=3, padx=20, pady=20, sticky="nsew")
 
 # Run the application
 window.mainloop()
