@@ -104,7 +104,7 @@ def show_user_account_info():
     for widget in app.winfo_children():
         widget.destroy()
 
-    heading = ctk.CTkLabel(master=app, text="User Account Information", font=('Helvetica', 20, 'bold'))
+    heading = ctk.CTkLabel(master=app, text="User Account Information", font=('Times New Roman', 20, 'bold'))
     heading.pack(pady=20)
 
     user_frame = Frame(app, padx=20, pady=20)
@@ -162,9 +162,9 @@ def show_user_account_info():
     EmployeeNumber.grid(row=4, column=1, pady=5, padx=5)
 
     # Buttons for user account actions
-    Button(user_frame, text="Insert", bg="light green", command=insert_user).grid(row=5, column=0, pady=20, padx=10)
-    Button(user_frame, text="Update", bg="light blue", command=update_user).grid(row=5, column=1, pady=20, padx=10)
-    Button(user_frame, text="Delete", bg="light yellow", command=delete_user).grid(row=5, column=2, pady=20, padx=10)
+    Button(user_frame, text="Insert", bg="green", command=insert_user).grid(row=5, column=0, pady=20, padx=10)
+    Button(user_frame, text="Update", bg="blue", command=update_user).grid(row=5, column=1, pady=20, padx=10)
+    Button(user_frame, text="Delete", bg="yellow", command=delete_user).grid(row=5, column=2, pady=20, padx=10)
     Button(user_frame, text="Cancel", bg="white", command=cancel_operation).grid(row=5, column=3, pady=20, padx=10)
 
     # Function to show payroll information (placeholder)
@@ -255,7 +255,7 @@ def show_payroll():
     # Search Frame Widgets
     Label(payroll_frame, text="Employee Number:").grid(row=7, column=0, sticky=E, pady=(10, 5), padx=(10.5))
     Entry(payroll_frame, textvariable=search_employee_number).grid(row=7, column=1, padx=(0, 50), pady=(20, 5))
-    Button(payroll_frame, text="Search", command=search_employee, bg="Red").grid(row=8, column=1, padx=(0, 80), pady=(5,50),
+    Button(payroll_frame, text="Search", command=search_employee, bg="Blue").grid(row=8, column=1, padx=(0, 80), pady=(5,50),
                                                                                  sticky=W)
 
     # Basic Income Section
@@ -296,14 +296,14 @@ def show_payroll():
     Entry(payroll_frame, textvariable=net_income_var).grid(row=23, column=1, pady=5)
 
     # Labels and Entry Widgets for payroll info
-    Label(payroll_frame, text="Bianca's Choice Payroll", font=("Times New Roman", 30, "bold")).grid(row=0, column=0, columnspan=3, padx=20, pady=20, sticky="nsew")
+    Label(payroll_frame, text="Bianca's Choice Payroll", font=("Arial", 30, "bold")).grid(row=0, column=0, columnspan=3, padx=20, pady=20, sticky="nsew")
 
     # Additional Buttons
-    Button(payroll_frame, text="GROSS INCOME", command=calculate_gross_income, bg="sky blue").grid(row=23, column=2, padx=(30, 5), pady=5, sticky=W)
-    Button(payroll_frame, text="NET INCOME", command=calculate_net_income, bg="sky blue").grid(row=23, column=2, padx=(130, 0), pady=5, sticky=W)
-    Button(payroll_frame, text="SAVE", command=save_payroll_data, bg="light green").grid(row=23, column=3, padx=(0, 0), pady=5, sticky=W)
-    Button(payroll_frame, text="UPDATE", command=update_payroll_data, bg="light green").grid(row=23, column=3, padx=(40, 0), pady=5, sticky=W)
-    Button(payroll_frame, text="DEDUCTIONS", command=calculate_deductions, bg="light yellow").grid(row=23, column=3, padx=(100, 0), pady=5, sticky=W)
+    Button(payroll_frame, text="GROSS INCOME", command=calculate_gross_income, bg="purple").grid(row=23, column=2, padx=(30, 5), pady=5, sticky=W)
+    Button(payroll_frame, text="NET INCOME", command=calculate_net_income, bg="green").grid(row=23, column=2, padx=(130, 0), pady=5, sticky=W)
+    Button(payroll_frame, text="SAVE", command=save_payroll_data, bg="red").grid(row=23, column=3, padx=(0, 0), pady=5, sticky=W)
+    Button(payroll_frame, text="UPDATE", command=update_payroll_data, bg="yellow").grid(row=23, column=3, padx=(40, 0), pady=5, sticky=W)
+    Button(payroll_frame, text="DEDUCTIONS", command=calculate_deductions, bg="blue").grid(row=23, column=3, padx=(100, 0), pady=5, sticky=W)
 
 
 def save_payroll_data():
